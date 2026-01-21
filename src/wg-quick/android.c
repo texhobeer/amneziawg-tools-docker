@@ -1284,13 +1284,17 @@ static void parse_options(char **iface, char **config, unsigned int *mtu, char *
 				is_awg_on = true;
 			} else if (!strncasecmp(clean, "I1=", 3) && j > 4) {
 				is_awg_on = true;
-			} else if (!strncasecmp(clean, "I2=", 3) && j > 4) {
+			} else if (!strncasecmp(clean, "I2=", 3) && j >= 3) {
+				// I2 can be empty, so we only check for the prefix
 				is_awg_on = true;
-			} else if (!strncasecmp(clean, "I3=", 3) && j > 4) {
+			} else if (!strncasecmp(clean, "I3=", 3) && j >= 3) {
+				// I3 can be empty, so we only check for the prefix
 				is_awg_on = true;
-			} else if (!strncasecmp(clean, "I4=", 3) && j > 4) {
+			} else if (!strncasecmp(clean, "I4=", 3) && j >= 3) {
+				// I4 can be empty, so we only check for the prefix
 				is_awg_on = true;
-			} else if (!strncasecmp(clean, "I5=", 3) && j > 4) {
+			} else if (!strncasecmp(clean, "I5=", 3) && j >= 3) {
+				// I5 can be empty, so we only check for the prefix
 				is_awg_on = true;
 			}
 		}
